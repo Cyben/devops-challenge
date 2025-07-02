@@ -20,7 +20,7 @@ git clone https://github.com/Cyben/devops-challenge.git
 cd devops-challenge/thedoctor
 ```
 
-2. **Create a .env file at the root of the project**
+2. **Create a .env file at the `devops-challenge/thedoctor` path of the project**
 
 ```env
 AWS_ACCESS_KEY_ID=your-access-key
