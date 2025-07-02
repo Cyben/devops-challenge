@@ -24,7 +24,7 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest thedoctor/tests/
+        pytest thedoctor/test/
 
   build-and-deploy:
     needs: test
