@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from dotenv import load_dotenv
-from dynamo_db import get_secret
+from app.dynamo_db import get_secret
 
 load_dotenv()
 
