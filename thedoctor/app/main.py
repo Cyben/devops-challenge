@@ -23,10 +23,16 @@ def get_secret():
 
 @app.route('/secret', methods=['GET'])
 def secret():
+    """
+    Returns the secret_code from DynamoDB.
+    """
     return jsonify({"secret_code": get_secret()})
 
 @app.route('/health', methods=['GET'])
 def health():
+    """
+    Returns status and links to container & GitHub repo.
+    """
     return jsonify({
         "status": "healthy",
         "container": "https://hub.docker.com/r/cybencyben/thedoctor-app",
