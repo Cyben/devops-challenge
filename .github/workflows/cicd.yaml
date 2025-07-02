@@ -27,7 +27,7 @@ jobs:
         pytest thedoctor/tests/
 
   build-and-deploy:
-    needs: build-and-test
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
