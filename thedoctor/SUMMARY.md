@@ -7,19 +7,21 @@ This project was built as part of a DevOps challenge, codenamed **thedoctor**. I
 ## Project Structure
 
 ```
-.
-├── app/  
-│ ├── requirements.txt # Python dependencies  
-│ └── main.py # Flask app with /secret and /health routes  
-├── tests/  
-│ └── test_app.py # Unit tests using pytest + monkeypatch
-├── .env # AWS credentials and config (excluded from git)
-├── Dockerfile # Builds the Flask app image
-├── docker-compose.yml # Simplifies local testing
 ├── .github/workflows/ci.yml # GitHub Actions workflow (tests + build + push)
-├── TROUBLE.md # Described difficulties
-├── INSTRUCTIONS.md # Running and testing instructions
-└── SUMMARY.md # This file
+└── thedoctor/
+    ├── app/  
+    │ ├── requirements.txt # Python dependencies  
+    │ └── main.py # Flask app with /secret and /health routes  
+    ├── tests/  
+    │ └── test_app.py # Unit tests using pytest + monkeypatch
+    ├── .env # AWS credentials and config (excluded from git)
+    ├── Dockerfile # Builds the Flask app image
+    ├── docker-compose.yml # Simplifies local testing
+    ├── pyproject.toml # Project configuration file
+    ├── verification.sh # Final verification test
+    ├── TROUBLE.md # Described difficulties
+    ├── INSTRUCTIONS.md # Running and testing instructions
+    └── SUMMARY.md # This file
 ```
 
 ## Development Steps
