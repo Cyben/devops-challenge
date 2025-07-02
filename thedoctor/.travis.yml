@@ -1,0 +1,22 @@
+language: python
+python:
+  - "3.11"
+services:
+  - docker
+
+
+branches:
+  only:
+    - master
+
+before_install:
+  - pip install -r requirements.txt
+  - pip install pytest
+
+script:
+  - pytest tests/
+
+after_success:
+  - docker build -t cybencyben/thedoctor-app .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push cybencyben/thedoctor-app
